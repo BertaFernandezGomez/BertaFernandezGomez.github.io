@@ -1,0 +1,53 @@
+<!doctype html>
+ <html>
+  <head>
+    <meta charset="utf-8" /> 
+    <title>Berta</title> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Mi casa</h1>
+
+
+    <script>
+	function setup() {
+  createCanvas(400, 400);    // Crea un lienzo de 400x400 píxeles
+  background(200);           // Fondo blanco
+
+  // Rectángulo pared
+  fill(232, 200, 111);
+  rect(50, 150, 300, 150);
+
+  // Rectángulo ventana 
+  fill(146, 224, 220);
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  rect(75, 175, 75, 75);
+
+  // Rectángulo ventana 
+  fill(146, 224, 220);
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  rect(250, 175, 75, 75);
+  
+    // Puerta
+  fill(111, 78, 55);
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  
+  rect(160, 175, 80, 125);
+
+  // Triángulo
+  fill(149, 6, 6);
+  triangle(40,150,200,50,360,150);
+  
+  //Manilla
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  line (205,250,230,250) ;
+
+}
+    </script>
+  </body>
+ </html>

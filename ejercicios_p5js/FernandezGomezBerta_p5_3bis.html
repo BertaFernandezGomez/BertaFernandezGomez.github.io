@@ -1,0 +1,83 @@
+<!doctype html>
+ <html>
+  <head>
+    <meta charset="utf-8" /> 
+    <title>Berta</title> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Mi casa</h1>
+
+
+    <script>
+	function setup() {
+  createCanvas(400, 400);    // Crea un lienzo de 400x400 píxeles
+  background(38, 43, 59);           // Fondo blanco
+
+  // Rectángulo pared
+  fill(232, 200, 111);
+  rect(50, 150, 300, 150);
+  
+  // Rectángulo suelo
+  fill(46, 59, 38);
+  stroke (30, 38, 24); 
+  strokeWeight (2);
+  rect(0, 300, 400, 300);
+
+  // Rectángulo ventana 
+  fill(227, 163, 2, 100);
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  rect(75, 175, 75, 75);
+
+  // Rectángulo ventana 
+  fill(227, 163, 2, 100);
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  rect(250, 175, 75, 75);
+  
+    // Puerta
+  fill(111, 78, 55);
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  
+  rect(160, 175, 80, 125);
+
+  // Triángulo
+  fill(149, 6, 6);
+  triangle(40,150,200,50,360,150);
+  
+  //Luna
+  fill(237, 191, 76);
+  stroke (227, 169, 25); 
+  strokeWeight (3);
+  circle(325,50,50)
+  
+    //Cola estrella fugaz
+  noFill()
+  stroke(255, 222, 138)
+  strokeWeight(9)
+  arc(60,50,90,50,PI,0)
+  
+  //Cola estrella fugaz
+  noFill()
+  stroke(255, 222, 138)
+  strokeWeight(9)
+  arc(70,70,90,50,PI,0)
+  
+  //Cabeza estrella fugaz
+  fill(250, 205, 92);
+  stroke (240, 189, 62); 
+  strokeWeight (2);
+  circle(105,50,20)
+  
+  //Manilla
+  stroke (77, 53, 37); 
+  strokeWeight (2);
+  line (205,250,230,250) ;
+
+}
+    </script>
+  </body>
+ </html>
