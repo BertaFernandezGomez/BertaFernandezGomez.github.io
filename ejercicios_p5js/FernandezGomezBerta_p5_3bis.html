@@ -12,18 +12,18 @@
 
     <script>
 	function setup() {
-  createCanvas(400, 400);    // Crea un lienzo de 400x400 píxeles
-  background(38, 43, 59);           // Fondo blanco
+  createCanvas(600, 600);    // Crea un lienzo de 400x400 píxeles
+  background(38, 43, 59);           // Fondo oscuro
 
   // Rectángulo pared
   fill(232, 200, 111);
   rect(50, 150, 300, 150);
   
   // Rectángulo suelo
-  fill(46, 59, 38);
-  stroke (30, 38, 24); 
+  fill(217, 210, 210);
+  stroke (133, 126, 126); 
   strokeWeight (2);
-  rect(0, 300, 400, 300);
+  rect(0, 300, 600, 300);
 
   // Rectángulo ventana 
   fill(227, 163, 2, 100);
@@ -43,9 +43,29 @@
   strokeWeight (2);
   
   rect(160, 175, 80, 125);
+  
+   // Chimenea 
+  fill(105, 21, 21);
+  stroke (77, 15, 15); 
+  strokeWeight (2);
+  rect(70,50,50,90);
+  
+  //Humo 1
+  fill(194, 188, 188, 150);
+  stroke(163, 160, 160);
+  strokeWeight(3);
+  circle(95,30,30)
+  
+  //Humo 2
+  fill(194, 188, 188, 150);
+  stroke(163, 160, 160);
+  strokeWeight(3);
+  circle(105,20,35)
 
   // Triángulo
   fill(149, 6, 6);
+  stroke(77, 16, 11) ;
+  strokeWeight(3) ;
   triangle(40,150,200,50,360,150);
   
   //Luna
@@ -54,28 +74,92 @@
   strokeWeight (3);
   circle(325,50,50)
   
-    //Cola estrella fugaz
-  noFill()
-  stroke(255, 222, 138)
-  strokeWeight(9)
-  arc(60,50,90,50,PI,0)
-  
-  //Cola estrella fugaz
-  noFill()
-  stroke(255, 222, 138)
-  strokeWeight(9)
-  arc(70,70,90,50,PI,0)
-  
-  //Cabeza estrella fugaz
-  fill(250, 205, 92);
-  stroke (240, 189, 62); 
+   // Tronco 
+  fill(59, 45, 32);
+  stroke (41, 33, 25); 
   strokeWeight (2);
-  circle(105,50,20)
+  rect(425,315,75,50);
   
-  //Manilla
-  stroke (77, 53, 37); 
-  strokeWeight (2);
-  line (205,250,230,250) ;
+  // Árbol
+  fill(42, 105, 37);
+  stroke(32, 64, 29) ;
+  strokeWeight(3) ;
+  triangle(400,315,475,40,550,315);
+  
+  //Cuerpo
+  fill(242, 242, 242);
+  stroke (130, 129, 129); 
+  strokeWeight (3);
+  circle(450,450,120)
+  
+  //Medio
+  fill(242, 242, 242);
+  stroke (130, 129, 129); 
+  strokeWeight (3);
+  circle(450,375,100)
+  
+  //Cabeza
+  fill(242, 242, 242);
+  stroke (130, 129, 129); 
+  strokeWeight (3);
+  circle(450,305,80)
+  
+  //Boton
+  fill(0);
+  stroke (0); 
+  strokeWeight (5);
+  circle(450,450,5)
+  
+  //Boton
+  fill(0);
+  stroke (0); 
+  strokeWeight (5);
+  circle(450,370,5)
+  
+  //Boton
+  fill(0);
+  stroke (0); 
+  strokeWeight (5);
+  circle(450,390,5)
+  
+  //Boton
+  fill(0);
+  stroke (0); 
+  strokeWeight (5);
+  circle(450,390,5)
+  
+  //Ojo izq
+  fill(0);
+  stroke (0); 
+  strokeWeight (5);
+  circle(435,305,5)
+  
+  //Ojo izq
+  fill(0);
+  stroke (0); 
+  strokeWeight (5);
+  circle(465,305,5) 
+  
+  // Nariz
+  fill(242, 148, 65);
+  stroke(247, 120, 7) ;
+  strokeWeight(3) ;
+  triangle(405,315,450,310,450,320);
+  
+  //Brazo izq
+  fill(59, 45, 32) ;
+  stroke (59, 45, 32) ;
+  strokeWeight (3) ;
+  line (490,360,500,450)
+  
+  //Brazo izq
+  fill(59, 45, 32) ;
+  stroke (59, 45, 32) ;
+  strokeWeight (3) ;
+  line (410,360,400,450)
+  
+  
+  
 
 }
     </script>
