@@ -10,7 +10,7 @@
     <script>
       // Variables
       let x, y, v, d, r;
-      let snowmanX; // posición del muñeco
+      let mX; // posición del muñeco
 
       function setup() {
         createCanvas(600, 600);
@@ -78,31 +78,31 @@
         fill(242, 242, 242);
         stroke(130, 129, 129);
         strokeWeight(3);
-        circle(snowmanX, 450, 120);
-        circle(snowmanX, 375, 100);
-        circle(snowmanX, 305, 80);
+        circle(mX, 450, 120);
+        circle(mX, 375, 100);
+        circle(mX, 305, 80);
 
         fill(0);
         stroke(0);
         strokeWeight(5);
-        circle(snowmanX, 450, 5);
-        circle(snowmanX, 390, 5);
-        circle(snowmanX, 370, 5);
+        circle(mX, 450, 5);
+        circle(mX, 390, 5);
+        circle(mX, 370, 5);
 
-        circle(snowmanX - 15, 305, 5);
-        circle(snowmanX + 15, 305, 5);
+        circle(mX - 15, 305, 5);
+        circle(mX + 15, 305, 5);
 
         fill(242, 148, 65);
         stroke(247, 120, 7);
         strokeWeight(3);
-        triangle(snowmanX, 310, snowmanX + 30, 315, snowmanX, 320);
+        triangle(mX, 310, mX + 30, 315, mX, 320);
 
         stroke(59, 45, 32);
-        line(snowmanX + 40, 360, snowmanX + 50, 450);
-        line(snowmanX - 40, 360, snowmanX - 50, 450);
+        line(mX + 40, 360, mX + 50, 450);
+        line(mX - 40, 360, mX - 50, 450);
 
         // Mover el muñeco hacia la izquierda
-        snowmanX -= 1; // cambia la velocidad
+        mX -= 1; // cambia la velocidad
 
         fill(255);
         noStroke();
@@ -113,3 +113,4 @@
     </script>
   </body>
 </html>
+
