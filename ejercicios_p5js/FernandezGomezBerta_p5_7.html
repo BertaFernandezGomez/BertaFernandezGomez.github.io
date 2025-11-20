@@ -8,72 +8,37 @@
   </head>
   <body>
   <script>
-  // Sol y su cielo
-  let x_s, y_s, v_s, d_s, r_s;
-  let x_cs;           // x del rectángulo "cielo del sol"
-  let adelanto_s;     // cuánto va por delante el cielo del sol
+  // Variables
+      let x, y, v, d, r;
+      let mX; // posición del muñeco
 
-  // Luna y su cielo
-  let x_l, y_l, v_l, d_l, r_l;
-  let x_cl;           // x del rectángulo "cielo de la luna"
-  let adelanto_l;     // cuánto va por delante el cielo de la luna
+      function setup() {
+        createCanvas(600, 600);
 
-  function setup() {
-    createCanvas(600, 600);
+        d = min(width, height) * 0.12;
+        r = d / 2;
 
-    // Tamaños relativos (diámetros)
-    d_s = width * 0.15;   r_s = d_s * 0.5;
-    d_l = height * 0.30;  r_l = d_l * 0.5;
+        x = -r;
+        y = height * 0.75;
+        v = width / 500;
+      }
 
-    // Posiciones iniciales de astros
-    x_s = -r_s;            y_s = height * 0.35;
-    x_l = -width - r_l;    y_l = height * 0.55;
+      function draw() {
+        background(38, 43, 59);
 
-    // Velocidades
-    v_s = width / 800;
-    v_l = v_s;
+        // Luna en movimiento
+        fill(237, 191, 76);
+        stroke(227, 169, 25);
+        strokeWeight(3);
+        circle(x + d * 0.6, y - 400, d * 0.8);
+        x = x + v;
 
-    // Adelantos (por delante del astro)
-    adelanto_s = width * 0.10; // 10% del ancho
-    adelanto_l = width * 0.10;
-
-    // Posiciones iniciales de los cielos (ligeramente por delante)
-    x_cs = x_s + adelanto_s;
-    x_cl = x_l + adelanto_l;
-  }
-
-  function draw() {
-    // Fondo base
-    background(20, 20, 30);
-    noStroke();
-
-    // Cielo del sol (azulado) — se pinta primero
-    fill(0, 0, 200);
-    rect(x_cs, 0, width, height * 0.8);
-
-    // Cielo de la luna (gris)
-    fill(200);
-    rect(x_cl, 0, width, height * 0.8);
-
-    // Suelo
-    fill(20, 120, 40);
-    rect(0, height * 0.8, width, height * 0.2);
-
-    // Sol
-    fill(255, 210, 0);
-    circle(x_s, y_s, d_s);
-
-    // Luna
-    fill(255);
-    circle(x_l, y_l, d_l);
-
-    // Movimiento de astros y de sus cielos (cada uno con su estado)
-    x_s  = x_s  + v_s;
-    x_cs = x_cs + v_s;   // el cielo del sol se desplaza con el sol
-
-    x_l  = x_l  + v_l;
-    x_cl = x_cl + v_l;   // el cielo de la luna se desplaza con la luna
-  }
+        fill(255);
+        noStroke();
+        textSize(14);
+        textAlign(LEFT, TOP);
+        text("A1 — Mi escena con variables", 10, 10);
+      }
   </script>
   </body>
 </html> 
