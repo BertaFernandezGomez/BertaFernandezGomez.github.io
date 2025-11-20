@@ -17,9 +17,10 @@
         dG = min(width, height) * 0.12;
         rG = dG / 2;
 
-        xG = width * 0.5;      
+        xG = width * 0.25;      
         yG = height * 1;    
-        vG = -1;               
+        vG = -1;
+        vX = 1;
       }
 
       function draw() {
@@ -37,6 +38,7 @@
         line(xG, yG + rG, xG, yG + rG + 70);
 
         yG = yG + vG;
+        xG = xG + vX;
 
         // Texto
         fill(255);
