@@ -29,7 +29,10 @@
         fill(210, 150, 255);
         stroke(199, 129, 252);
         strokeWeight(4);
-        circle(xG, yG, dG);    
+        circle(xG, yG, dG); 
+
+        // Cordón
+        line(xG, yG + rG + 40)
 
         yG = yG + vG;
 
@@ -39,6 +42,8 @@
         textSize(14);
         textAlign(LEFT, TOP);
         text("Mi globo", 10, 10);
+
+        
       }
   </script>
   </body>
