@@ -17,23 +17,23 @@
         dG = min(width, height) * 0.12;
         rG = dG / 2;
 
-        xG = width * 0.5;   // centro horizontal
-        yG = height * 0.75; // abajo
-        vG = -0.5;          // sube lentamente
+        xG = width * 0.5;      
+        yG = height * 1;    
+        vG = -1;               
       }
 
       function draw() {
         background(148, 186, 247);
 
-        // Globo (simple)
+        // Globo
         fill(210, 150, 255);
         stroke(199, 129, 252);
         strokeWeight(4);
-        circle(xG, yG, dG);
+        circle(xG, yG, dG);    
 
-        // Movimiento
         yG += vG;
 
+        // Texto
         fill(255);
         noStroke();
         textSize(14);
