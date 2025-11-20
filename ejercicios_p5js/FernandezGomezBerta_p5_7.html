@@ -8,7 +8,7 @@
   </head>
   <body>
   <script>
-  // Variables
+      // Variables
       let xG, yG, vG, dG, rG;
 
       function setup() {
@@ -17,20 +17,22 @@
         dG = min(width, height) * 0.12;
         rG = dG / 2;
 
-        x = rG;
-        yG = height * 0.75;
-        vG = width / 500;
+        xG = width * 0.5;   // centro horizontal
+        yG = height * 0.75; // abajo
+        vG = -0.5;          // sube lentamente
       }
 
       function draw() {
         background(148, 186, 247);
 
-        // Globo
+        // Globo (simple)
         fill(210, 150, 255);
         stroke(199, 129, 252);
         strokeWeight(4);
-        circle(x + d * 0.6, y - 400, d * 0.8);
-        yG = yG + vG;
+        circle(xG, yG, dG);
+
+        // Movimiento
+        yG += vG;
 
         fill(255);
         noStroke();
@@ -40,4 +42,4 @@
       }
   </script>
   </body>
-</html> 
+</html>
