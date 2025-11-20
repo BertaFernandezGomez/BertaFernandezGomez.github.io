@@ -9,17 +9,17 @@
   <body>
   <script>
   // Variables
-      let x, y, v, d, r;
+      let xG, yG, vG, dG, rG;
 
       function setup() {
         createCanvas(600, 600);
 
-        d = min(width, height) * 0.12;
-        r = d / 2;
+        dG = min(width, height) * 0.12;
+        rG = dG / 2;
 
-        x = -r;
-        y = height * 0.75;
-        v = width / 500;
+        x = rG;
+        yG = height * 0.75;
+        vG = width / 500;
       }
 
       function draw() {
@@ -30,7 +30,7 @@
         stroke(199, 129, 252);
         strokeWeight(4);
         circle(x + d * 0.6, y - 400, d * 0.8);
-        x = x + v;
+        yG = yG + vG;
 
         fill(255);
         noStroke();
