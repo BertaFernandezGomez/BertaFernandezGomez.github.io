@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mi sistema solar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  </head>
+  <body>
+  <script>
+  // Variables del sol
+  let Xs, Ys, Vs, Ds, Rs;
+  // Variables de Mercurio
+  let Xme, Yme, Vme, Dme, Rme;
+
+
+  function setup() {
+    createCanvas(700, 400);
+    // Ds
+    Ds = width/5 ;
+    // Xs y Ys
+    Xs = width/2 ;
+    Ys = height/2 ;
+	//Planeta de prueba: mercurio
+	Xme= Xs + 2*Rme ;
+	Yme= Ys + 2*Rme ;
+	
+  function draw() {
+    // Escena base
+    background(26, 26, 26);
+    noStroke();
+    // Sol
+    fill(255, 210, 0);
+    circle(Xs, Ys, Ds);
+  }
+  </script>
+  </body>
+</html>
