@@ -10,6 +10,23 @@
   <script>
   // Variables del sol
   let Xs, Ys, Vs, Ds, Rs;
+    // Variables de Mercurio
+  let Xme, Yme, Vme, Dme, Rme;
+    // Variables de Venus
+  let Xv, Yv, Vv, Dv, Rv;
+    // Variables de Tierra
+  let Xt, Yt, Vt, Dt, Rt;
+    // Variables de Marte
+  let Xma, Yma, Vma, Dma, Rma;
+    // Variables de Júpiter
+  let Xj, Yj, Vj, Dj, Rj;
+    // Variables de Saturno
+  let Xsa, Ysa, Vsa, Dsa, Rsa;
+    // Variables de Urano
+  let Xu, Yu, Vu, Du, Ru;
+    // Variables de Neptuno
+  let Xn, Yn, Vn, Dn, Rn;
+
 
   function setup() 
   {
@@ -19,6 +36,39 @@
     // Xs y Ys
     Xs = width/2 ;
     Ys = height/2 ;
+    
+    // Mercurio
+    Dme = Ds/200; 
+    Rme = Ds * 0.2;
+
+    // Venus
+    Dv = Ds/120;
+    Rv = Ds * 1.7;
+
+    // Tierra
+    Dt = Ds/10;
+    Rt = Ds * 2.2;
+
+    // Marte
+    Dma = Ds/200;
+    Rma = Ds * 2.7;
+
+    // Júpiter
+    Dj = Ds/10;
+    Rma = Ds * 2.7;
+    
+    // Saturno
+    Dma = Ds/10;
+    Rma = Ds * 2.7;
+    
+    // Urano
+    Dma = Ds/200;
+    Rma = Ds * 2.7;
+    
+    // Neptuno
+    Dma = Ds/200;
+    Rma = Ds * 2.7;
+    
   }
   function draw() 
   {
@@ -27,31 +77,49 @@
     noStroke();
     // Sol
     fill(255, 210, 0);
+    stroke (77, 53, 37); 
+    strokeWeight (2);
     circle(Xs, Ys, Ds);
     // Mercurio
     fill(196, 150, 104);
-    circle(Xs, Ys, Ds);
+    stroke (168, 127, 86); 
+    strokeWeight (2);
+    circle(Xme, Yme, Dme);
     // Venus
-    fill(255, 210, 0);
-    circle(Xs, Ys, Ds);
+    fill(255, 158, 61);
+    stroke (255, 142, 28); 
+    strokeWeight (2);
+    circle(Xv, Yv, Dv);
     // Tierra
-    fill(255, 210, 0);
-    circle(Xs, Ys, Ds);
+    fill(28, 119, 255);
+    stroke (58, 255, 28); 
+    strokeWeight (2);
+    circle(Xt, Yt, Dt);
     // Marte
-    fill(255, 210, 0);
-    circle(Xs, Ys, Ds);
+    fill(255, 98, 36);
+    stroke (209, 76, 23); 
+    strokeWeight (2);
+    circle(Xma, Yma, Dma);
     // Júpiter
-    fill(255, 210, 0);
-    circle(Xs, Ys, Ds);
+    fill(212, 169, 112);
+    stroke (194, 150, 91); 
+    strokeWeight (2);
+    circle(Xj, Yj, Dj);
     // Saturno
-    fill(255, 210, 0);
-    circle(Xs, Ys, Ds);
+    fill(255, 210, 150);
+    stroke (255, 199, 125); 
+    strokeWeight (2);
+    circle(Xsa, Ysa, Dsa);
     // Urano
-    fill(255, 210, 0);
-    circle(Xs, Ys, Ds);
+    fill(145, 255, 250);
+    stroke (90, 191, 187); 
+    strokeWeight (2);
+    circle(Xu, Yu, Du);
     // Neptuno
-    fill(255, 210, 0);
-    circle(Xs, Ys, Ds);
+    fill(61, 91, 173);
+    stroke (28, 51, 115); 
+    strokeWeight (2);
+    circle(Xn, Yn, Dn);
   }
   </script>
   </body>
