@@ -6,121 +6,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
   </head>
+
   <body>
-  <script>
-  // Variables del sol
-  let Xs, Ys, Vs, Ds, Rs;
-    // Variables de Mercurio
-  let Xme, Yme, Vme, Dme, Rme;
-    // Variables de Venus
-  let Xv, Yv, Vv, Dv, Rv;
-    // Variables de Tierra
-  let Xt, Yt, Vt, Dt, Rt;
-    // Variables de Marte
-  let Xma, Yma, Vma, Dma, Rma;
-    // Variables de Júpiter
-  let Xj, Yj, Vj, Dj, Rj;
-    // Variables de Saturno
-  let Xsa, Ysa, Vsa, Dsa, Rsa;
-    // Variables de Urano
-  let Xu, Yu, Vu, Du, Ru;
-    // Variables de Neptuno
-  let Xn, Yn, Vn, Dn, Rn;
+    <script>
 
+      // Sol
+      let Xs, Ys, Ds;
+      // Mercurio
+      let Xme, Yme, Dme, Rme, Ame, Vme;
+      // Venus
+      let Xv, Yv, Dv, Rv, Av, Vv;
+      // Tierra
+      let Xt, Yt, Dt, Rt, At, Vt;
+      // Marte
+      let Xma, Yma, Dma, Rma, Ama, Vma;
+      // Júpiter
+      let Xj, Yj, Dj, Rj, Aj, Vj;
+      // Saturno
+      let Xsa, Ysa, Dsa, Rsa, Asa, Vsa;
+      // Urano
+      let Xu, Yu, Du, Ru, Au, Vu;
+      // Neptuno
+      let Xn, Yn, Dn, Rn, An, Vn;
 
-  function setup() 
-  {
-    createCanvas(700, 400);
-    // Ds
-    Ds = width/5 ;
-    // Xs y Ys
-    Xs = width/2 ;
-    Ys = height/2 ;
-    
-    // Mercurio
-    Dme = Ds/200; 
-    Rme = Ds * 0.2;
+      function setup() {
+        createCanvas(1000, 1000);
 
-    // Venus
-    Dv = Ds/120;
-    Rv = Ds * 1.7;
+        // Sol
+        Xs = width / 2;
+        Ys = height / 2;
+        Ds = width / 12;
 
-    // Tierra
-    Dt = Ds/10;
-    Rt = Ds * 2.2;
+        // Mercurio
+        Dme = Ds * 0.2;
+        Rme = Ds;
+        Ame = 0;
+        Vme = 0.04;
 
-    // Marte
-    Dma = Ds/200;
-    Rma = Ds * 2.7;
+        // Venus
+        Dv = Ds / 3.5;
+        Rv = Ds * 1.4;
+        Av = 1;
+        Vv = 0.03;
 
-    // Júpiter
-    Dj = Ds/10;
-    Rma = Ds * 2.7;
-    
-    // Saturno
-    Dma = Ds/10;
-    Rma = Ds * 2.7;
-    
-    // Urano
-    Dma = Ds/200;
-    Rma = Ds * 2.7;
-    
-    // Neptuno
-    Dma = Ds/200;
-    Rma = Ds * 2.7;
-    
-  }
-  function draw() 
-  {
-    // Cielo
-    background(26, 26, 26);
-    noStroke();
-    // Sol
-    fill(255, 210, 0);
-    stroke (77, 53, 37); 
-    strokeWeight (2);
-    circle(Xs, Ys, Ds);
-    // Mercurio
-    fill(196, 150, 104);
-    stroke (168, 127, 86); 
-    strokeWeight (2);
-    circle(Xme, Yme, Dme);
-    // Venus
-    fill(255, 158, 61);
-    stroke (255, 142, 28); 
-    strokeWeight (2);
-    circle(Xv, Yv, Dv);
-    // Tierra
-    fill(28, 119, 255);
-    stroke (58, 255, 28); 
-    strokeWeight (2);
-    circle(Xt, Yt, Dt);
-    // Marte
-    fill(255, 98, 36);
-    stroke (209, 76, 23); 
-    strokeWeight (2);
-    circle(Xma, Yma, Dma);
-    // Júpiter
-    fill(212, 169, 112);
-    stroke (194, 150, 91); 
-    strokeWeight (2);
-    circle(Xj, Yj, Dj);
-    // Saturno
-    fill(255, 210, 150);
-    stroke (255, 199, 125); 
-    strokeWeight (2);
-    circle(Xsa, Ysa, Dsa);
-    // Urano
-    fill(145, 255, 250);
-    stroke (90, 191, 187); 
-    strokeWeight (2);
-    circle(Xu, Yu, Du);
-    // Neptuno
-    fill(61, 91, 173);
-    stroke (28, 51, 115); 
-    strokeWeight (2);
-    circle(Xn, Yn, Dn);
-  }
-  </script>
+        // Tierra
+        Dt = Ds / 2.2;
+        Rt = Ds * 1.9;
+        At = 2;
+        Vt = 0.02;
+
+        // Marte
+        Dma = Ds / 2.7;
+        Rma = Ds * 2.45;
+        Ama = 3;
+        Vma = 0.015;
+
+        // Júpiter
+        Dj = Ds * 0.6;
+        Rj = Ds * 3.05;
+        Aj = 0.5;
+        Vj = 0.008;
+
+        // Saturno
+        Dsa = Ds * 0.65;
+        Rsa = Ds * 3.8;
+        Asa = 1.5;
+        Vsa = 0.006;
+
+        // Urano
+        Du = Ds / 1.6;
+        Ru = Ds * 4.55;
+        Au = 2.5;
+        Vu = 0.004;
+
+        // Neptuno
+        Dn = Ds / 1.6;
+        Rn = Ds * 5.3;
+        An = 3.5;
+        Vn = 0.003;
+      }
+
+      function draw() {
+        background(26, 26, 26);
+
+        // Sol
+        fill(255, 210, 0);
+        stroke(77, 53, 37);
+        strokeWeight(2);
+        circle(Xs, Ys, Ds);
+
+        // Orbitas
+        noFill();
+        stroke(255);
+        strokeWeight(1);
+        circle(Xs, Ys, 2 * Rme);
+        circle(Xs, Ys, 2 * Rv);
+        circle(Xs, Ys, 2 * Rt);
+        circle(Xs, Ys, 2 * Rma);
+        circle(Xs, Ys, 2 * Rj);
+        circle(Xs, Ys, 2 * Rsa);
+        circle(Xs, Ys, 2 * Ru);
+        circle(Xs, Ys, 2 * Rn);
+
+        // Mercurio
+        Xme = Xs + cos(Ame) * Rme;
+        Yme = Ys + sin(Ame) * Rme;
+        fill(196, 150, 104);
+        circle(Xme, Yme, Dme);
+        Ame += Vme;
+
+        // Venus
+        Xv = Xs + cos(Av) * Rv;
+        Yv = Ys + sin(Av) * Rv;
+        fill(255, 158, 61);
+        circle(Xv, Yv, Dv);
+        Av += Vv;
+
+        // Tierra
+        Xt = Xs + cos(At) * Rt;
+        Yt = Ys + sin(At) * Rt;
+        fill(28, 119, 255);
+        circle(Xt, Yt, Dt);
+        At += Vt;
+
+        // Marte
+        Xma = Xs + cos(Ama) * Rma;
+        Yma = Ys + sin(Ama) * Rma;
+        fill(255, 98, 36);
+        circle(Xma, Yma, Dma);
+        Ama += Vma;
+
+        // Júpiter
+        Xj = Xs + cos(Aj) * Rj;
+        Yj = Ys + sin(Aj) * Rj;
+        fill(212, 169, 112);
+        circle(Xj, Yj, Dj);
+        Aj += Vj;
+
+        // Saturno
+        Xsa = Xs + cos(Asa) * Rsa;
+        Ysa = Ys + sin(Asa) * Rsa;
+        fill(255, 210, 150);
+        circle(Xsa, Ysa, Dsa);
+        Asa += Vsa;
+
+        // Urano
+        Xu = Xs + cos(Au) * Ru;
+        Yu = Ys + sin(Au) * Ru;
+        fill(145, 255, 250);
+        circle(Xu, Yu, Du);
+        Au += Vu;
+
+        // Neptuno
+        Xn = Xs + cos(An) * Rn;
+        Yn = Ys + sin(An) * Rn;
+        fill(61, 91, 173);
+        circle(Xn, Yn, Dn);
+        An += Vn;
+      }
+    </script>
   </body>
 </html>
