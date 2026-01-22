@@ -152,11 +152,10 @@
         // movimiento del disparo
         if (disparoActivo) {
           yD = yD - vD;
-        }
         if (yD < 0) {
           disparoActivo = false;
         }
-        }
+      }
         // Posiciones del cuerpo
         hipY = yP - legL;
         shoulderY = hipY - bodyL;
@@ -179,7 +178,7 @@
          disparoActivo = true;
       }
        }
-
+      }
       function dibujarStickman() {
         stroke(0);
         strokeWeight(0.06 * S);
