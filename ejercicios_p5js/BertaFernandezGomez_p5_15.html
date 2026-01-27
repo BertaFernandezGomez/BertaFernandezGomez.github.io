@@ -16,6 +16,8 @@
       let xP, yP;
       let S;
       let vP;
+	  
+	  let x0, w0, y0, h0, v0;
 
       let groundY;
       let vY;
@@ -69,6 +71,14 @@
         bodyL = 0.60 * S;
         armL  = 0.45 * S;
         legL  = 0.55 * S;
+		
+		// Cuadrado
+		y0 = 0.3*height;
+		w0 = 0.25*width;
+		x0 = width - w0;
+		h0 = 0.1*height;
+		v0 = random(width/400, width/800);
+		
       }
 
       function draw() {
@@ -148,6 +158,12 @@
         headY = shoulderY - rHead;
 
         dibujarStickman();
+		
+		// Rectángulo
+		fill(225);
+		noStroke();
+		rect(x0,y0,w0,h0);
+		x0 = x0 + v0;
       }
 
       function keyPressed() {
